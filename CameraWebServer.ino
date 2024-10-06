@@ -1,6 +1,7 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 
+<<<<<<< HEAD
 #include <vector>
 #include "AsyncUDP.h"
 #include "esp_netif.h"
@@ -9,6 +10,8 @@
 #include <lwip/netdb.h>
 
 
+=======
+>>>>>>> 11ecd6740279fab53141e90686e43449c3b91c80
 //
 // WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
 //            Ensure ESP32 Wrover Module or other board with PSRAM is selected
@@ -45,6 +48,7 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
+<<<<<<< HEAD
 const char *ssid = "CMCC-Frwt";
 const char *password = "u69rwpm3";
 
@@ -134,6 +138,19 @@ void loop()
 
 void camera_init(void)
 {
+=======
+const char *ssid = "秋朵酒店";
+const char *password = "66666666";
+
+void startCameraServer();
+void setupLedFlash(int pin);
+#define LED_GPIO_NUM 4
+void setup() {
+  Serial.begin(3000000);
+  Serial.setDebugOutput(true);
+  Serial.println();
+
+>>>>>>> 11ecd6740279fab53141e90686e43449c3b91c80
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -219,6 +236,7 @@ void camera_init(void)
 #if defined(LED_GPIO_NUM)
   setupLedFlash(LED_GPIO_NUM);
 #endif
+<<<<<<< HEAD
 
 }
 
@@ -312,6 +330,5 @@ void UdpSendCameraData(void* data)
       //delay(10);
   }
 }
-
 
 
